@@ -1,6 +1,9 @@
 package y22
 
-import "advent-of-code/utils"
+import (
+	"advent-of-code/utils"
+	"log"
+)
 
 func Day02Part1() {
 	scanner := utils.OpenDataFile("y22/d02.data")
@@ -33,30 +36,24 @@ func Day02Part1() {
 		current_line := scanner.Text()
 		if current_line == "A X" {
 			totalPoints += 4
-		}
-		if current_line == "A Y" {
+		} else if current_line == "A Y" {
 			totalPoints += 8
-		}
-		if current_line == "A Z" {
+		} else if current_line == "A Z" {
 			totalPoints += 3
-		}
-		if current_line == "B X" {
+		} else if current_line == "B X" {
 			totalPoints += 1
-		}
-		if current_line == "B Y" {
+		} else if current_line == "B Y" {
 			totalPoints += 5
-		}
-		if current_line == "B Z" {
+		} else if current_line == "B Z" {
 			totalPoints += 9
-		}
-		if current_line == "C X" {
+		} else if current_line == "C X" {
 			totalPoints += 7
-		}
-		if current_line == "C Y" {
+		} else if current_line == "C Y" {
 			totalPoints += 2
-		}
-		if current_line == "C Z" {
+		} else if current_line == "C Z" {
 			totalPoints += 6
+		} else {
+			log.Fatal("Unknown values")
 		}
 	}
 
@@ -87,30 +84,24 @@ func Day02Part2() {
 		current_line := scanner.Text()
 		if current_line == "A X" {
 			totalPoints += 3
-		}
-		if current_line == "A Y" {
+		} else if current_line == "A Y" {
 			totalPoints += 4
-		}
-		if current_line == "A Z" {
+		} else if current_line == "A Z" {
 			totalPoints += 8
-		}
-		if current_line == "B X" {
+		} else if current_line == "B X" {
 			totalPoints += 1
-		}
-		if current_line == "B Y" {
+		} else if current_line == "B Y" {
 			totalPoints += 5
-		}
-		if current_line == "B Z" {
+		} else if current_line == "B Z" {
 			totalPoints += 9
-		}
-		if current_line == "C X" {
+		} else if current_line == "C X" {
 			totalPoints += 2
-		}
-		if current_line == "C Y" {
+		} else if current_line == "C Y" {
 			totalPoints += 6
-		}
-		if current_line == "C Z" {
+		} else if current_line == "C Z" {
 			totalPoints += 7
+		} else {
+			log.Fatal("Unknown values")
 		}
 	}
 
