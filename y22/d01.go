@@ -7,11 +7,11 @@ import (
 	"strconv"
 )
 
-func DayOne() {
+func Day01() {
 	var elf = 0
 	var elves = []int{}
 
-	scanner := utils.OpenDataFile("y22/day_one.data")
+	scanner := utils.OpenDataFile("y22/d01.data")
 	for scanner.Scan() {
 		current_line := scanner.Text()
 		if current_line == "" {
