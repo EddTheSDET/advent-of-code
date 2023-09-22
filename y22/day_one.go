@@ -1,29 +1,17 @@
 package y22
 
 import (
-	"bufio"
+	"advent-of-code/utils"
 	"log"
-	"os"
 	"slices"
 	"strconv"
 )
 
 func DayOne() {
-	path, err := os.Getwd()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	file, err := os.Open(path + "/y22/day_one.data")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	scanner := bufio.NewScanner(file)
-
 	var elf = 0
 	var elves = []int{}
 
+	scanner := utils.OpenDataFile("y22/day_one.data")
 	for scanner.Scan() {
 		current_line := scanner.Text()
 		if current_line == "" {
